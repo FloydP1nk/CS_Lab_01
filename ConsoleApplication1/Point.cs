@@ -11,12 +11,12 @@ namespace ConsoleApplication1
             this._y = y;
         }
 
-        public double GetX
+        public double X
         {
             get { return _x; }
         }
 
-        public double GetY
+        public double Y
         {
             get { return _y; }
         }
