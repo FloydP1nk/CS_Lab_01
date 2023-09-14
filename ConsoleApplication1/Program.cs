@@ -7,6 +7,8 @@ namespace ConsoleApplication1
         public static void Main(string[] args)
         {
             // 1
+            Console.WriteLine("1 Задание");
+            Console.WriteLine("------------------------");
             Console.WriteLine("Минимальные и максимальные значения для предопределенных типов данных C#:");
 
             Console.WriteLine(
@@ -35,6 +37,8 @@ namespace ConsoleApplication1
             Console.WriteLine(
                 $"DateTime: минимальное значение = {DateTime.MinValue}, максимальное значение = {DateTime.MaxValue}");
             // 2
+            Console.WriteLine("------------------------");
+            Console.WriteLine("2 Задание");
             Console.WriteLine($"enter side1");
             double side1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine($"enter side2");
@@ -45,6 +49,8 @@ namespace ConsoleApplication1
             Console.WriteLine("Area: " + area);
             Console.WriteLine("Perimeter: " + perimeter);
             // 3
+            Console.WriteLine("------------------------");
+            Console.WriteLine("3 Задание");
             Point point1 = new Point(0, 0);
             Point point2 = new Point(0, 4);
             Point point3 = new Point(3, 0);
