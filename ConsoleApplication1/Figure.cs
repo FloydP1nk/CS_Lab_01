@@ -7,33 +7,27 @@ namespace ConsoleApplication1
     public class Figure
     {
         public string Name { get; set; }
-        // private Point _a, _b, _c, _d, _e;
         private Point[] points;
 
-        public Figure(Point a, Point b, Point c)
-        {
-            points = new Point[3];
-            points[0] = a;
-            points[1] = b;
-            points[2] = c;
-        }
-
-        public Figure(Point a, Point b, Point c, Point d) 
-        {
-            points = new Point[4];
-            points[0] = a;
-            points[1] = b;
-            points[2] = c;
-            points[3] = d;
-        }
-
-        public Figure(Point a, Point b, Point c, Point d, Point e)
+        public Figure()
         {
             points = new Point[5];
+        }
+
+        public Figure(Point a, Point b, Point c) : this()
+        {
             points[0] = a;
             points[1] = b;
             points[2] = c;
+        }
+
+        public Figure(Point a, Point b, Point c, Point d) : this(a, b, c)
+        {
             points[3] = d;
+        }
+
+        public Figure(Point a, Point b, Point c, Point d, Point e) : this(a, b, c, d)
+        {
             points[4] = e;
         }
 
@@ -46,12 +40,19 @@ namespace ConsoleApplication1
         public void PerimeterCalculator()
         {
             double perimeter = 0;
-            for (int i = 0; i < points.Length - 1; i++)
+            int last=0;
+            for (int i = 0; i < points.Length-1; ++i)
             {
+                if (points[i] != null && points[i + 1] == null)
+                {
+                    last = i;
+                    break;
+                }
+
                 perimeter += LengthSide(points[i], points[i + 1]);
             }
 
-            perimeter += LengthSide(points[points.Length - 1], points[0]);
+            perimeter += LengthSide(points[0], points[last]);
 
             Console.WriteLine("Название фигуры: " + Name);
             Console.WriteLine("Периметр фигуры: " + perimeter);

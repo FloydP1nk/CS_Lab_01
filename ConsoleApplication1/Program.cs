@@ -43,12 +43,9 @@ namespace ConsoleApplication1
             double side1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine($"enter side2");
             double side2 = Convert.ToDouble(Console.ReadLine());
-            Rectangle rect = new Rectangle(side1, side2);
-            double area = rect.Area;
-            double perimeter = rect.Perimeter;
-            Console.WriteLine("Area: " + area);
-            Console.WriteLine("Perimeter: " + perimeter);
-            // 3
+            Rectangle rectangle = new Rectangle(side1, side2);
+            Console.WriteLine($"Area: {rectangle.Area} Perimetr: {rectangle.Perimeter}");
+
             Console.WriteLine("------------------------");
             Console.WriteLine("3 Задание");
             Point point1 = new Point(0, 0);
