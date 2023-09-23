@@ -40,8 +40,8 @@ namespace ConsoleApplication1
         public void PerimeterCalculator()
         {
             double perimeter = 0;
-            int last=0;
-            for (int i = 0; i < points.Length-1; ++i)
+            int last = 0;
+            for (int i = 0; i < points.Length - 1; ++i)
             {
                 if (points[i] != null && points[i + 1] == null)
                 {
